@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Video Example</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "poppins";
+    }
+    
+    video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: -1;
+    }
+    .container{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .content{
+      text-align: center;
+    }
+    .content h1{
+      font-size: 95px;
+      color:antiquewhite;
+      margin-bottom: 50px;
+    }
+    .content form{
+      border:2px floralwhite #fff ;
+      align-items: center;
+    }
+   
+ .wrap{
+   width:420px;
+   background-color:transparent;
+   align-items: center;
+  
+   
+   
+   
+
+ }
+ .wrap  .input{
+  width: 100%;
+  height: 50px;
+  
+  margin: 30px  0 ;
+ }
+ .input input{
+width: 100%;
+height: 100%;
+background:transparent;
+border:none;
+outline: none;
+border: 2px solid rgba(255,255,255,.2);
+border-radius: 40px;
+color: #fff;
+justify-content: center;
+font-size: 23px;
+display: flex;
+ }
+ .input input::placeholder{
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px;
+
+ }
+ .wrap .remember_forgot{
+  display: flex;
+  justify-content:space-between;
+  font: 14.5px;
+  margin: -15px 0 15px;
+  color: #fff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+ .remember_forgot label input{
+   accent-color: #fff;
+   margin-right: 3px;}
+
+
+   .wrap .btn{
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10 px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight:bold;
+    color: #333;
+    font-weight: 600;
+   }
+   .input img{
+    width: 35px;
+    cursor: pointer;
+    padding-left: 500x;
+   }
+   a{
+    color: #333;
+   }
+  </style>
+  
+</head>
+<body>
+  
+ 
+  
+  <div class="container">
+    <div class="content">
+      <h1>Traffic Fine Payment</h1>
+     <div class="wrap">
+      <form action="">
+        <div class="input">
+          
+          <input type="text" placeholder="number plate number"
+          required>
+          
+
+        </div>
+        <div class="wrap">
+          <form action="">
+            <div class="input">
+              
+              <input type="password" placeholder="password" id="password" required >
+             <div class="sow"> </div>
+            
+            </div>
+      <div class="remember_forgot">
+
+        <label><input type="checkbox">remember me</label>
+      </div>
+       <button type="submit" class="btn"> <a href="web2.html">login</a></button>
+          </form>
+      
+      </div>
+        
+        
+    </div>
+  </div>
+  
+  <video autoplay muted loop class="background-clip">
+    <source src="bg.mp4" type="video/mp4">
+  </video>
+  <script >
+    function togglePasswordVisibility() {
+    var passwordInput = document.getElementById("password");
+    var passIcon = document.getElementById("pass-icon");
+    
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      passIcon.src = "wed/bx-low-vision.svg"; // Change icon to show
+    } else {
+      passwordInput.type = "password";
+      passIcon.src = "bx-lock-alt.svg"; // Change icon to hide
+    }
+  }
+  </script>
+</body>
+</html>

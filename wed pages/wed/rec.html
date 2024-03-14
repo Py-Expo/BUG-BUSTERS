@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scanner</title>
+<style>
+  #video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+  #canvas {
+    display: none;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  h1{
+            color:black;
+            font-size: 23px;
+        }
+</style>
+</head>
+<body>
+
+<h1>Scanner your divering</h1>
+
+<video id="video" playsinline autoplay></video>
+<canvas id="canvas"></canvas>
+<button id="scanButton">Scan</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const video = document.getElementById('video');
+  const canvas = document.getElementById('canvas');
+  const scanButton = document.getElementById('scanButton');
+
+  // Check if getUserMedia is available
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(function(stream) {
+        video.srcObject = stream;
+        video.play();
+      })
+      .catch(function(err) {
+        console.error('Error accessing camera:', err);
+      });
+
+    // Handle scan button click
+    scanButton.addEventListener('click', function() {
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+      // You can now use the canvas image data for further processing, such as sending it to a server for OCR or barcode recognition.
+      // Example: const imageData = canvas.toDataURL('image/png');
+    });
+  } else {
+    console.error('getUserMedia is not supported');
+  }
+});
+</script>
+
+</body>
+</html>

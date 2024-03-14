@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Submission</title>
+<style>
+
+    h1{
+      font-size: 95px;
+      color:antiquewhite;
+      margin-bottom: 50px;
+    }
+    video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: -1;
+    }
+    .btn{
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10 px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight:bold;
+    color: #333;
+    font-weight: 600;
+   }
+   .btn2{
+    margin-top: 10px;
+   }
+   h2{
+    color: #fff;
+       }
+   label{
+    color: #fff;
+    font-size: 23px;
+    justify-items: center;
+   }
+   select{
+    align-items: center;
+   }
+a{
+    color:#333;
+}
+    </style>
+</head>
+<body>
+
+<h1> conform its yours</h1>
+
+
+<img src="\wed pages\wed\captured_face.jpg" width="500" height="333" alt="output_img">
+<h2> comform its your age .if  below 18 pay the fine. the fine amout is rs 1000.   </h2>
+<div class="wrap">
+    
+        
+
+           
+            <label for="currency">payment method</label>
+            <select id="currency" name="currency" required>
+                <option value="USD">upi</option>
+                <option value="EUR">phone pay</option>
+                <option value="GBP">gpay</option>
+                <option value="JPY">net banking</option>
+            </select>
+</form>
+</div>
+ <button type="submit" class="btn"><a href="payment.html"> pay</a></button>
+</div>
+<div class="btn2">
+<a href="rec.html"><button type="submit" class="btn"> recongition </button></a>
+</div>
+   
+
+
+<video autoplay muted loop class="background-clip">
+    <source src="bg.mp4" type="video/mp4">
+  </video>
+</body>
+</html>
